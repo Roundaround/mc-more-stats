@@ -84,6 +84,11 @@ public final class MoreStats {
   public static final Identifier END_PORTAL = register("end_portal", StatFormatter.DEFAULT);
   public static final Identifier END_GATEWAY = register("end_gateway", StatFormatter.DEFAULT);
   public static final Identifier OTHER_PORTALS = register("other_portals", StatFormatter.DEFAULT);
+  public static final Identifier ITEM_BUNDLED = register("item_bundled", StatFormatter.DEFAULT);
+  public static final Identifier SUSPICIOUS_BLOCKS_BRUSHED = register("suspicious_blocks_brushed", StatFormatter.DEFAULT);
+  public static final Identifier BREATH_OF_THE_NAUTILUS_TIME = register("breath_of_the_nautilus_time", StatFormatter.TIME);
+  public static final Identifier BABY_AGE_LOCKED = register("baby_age_locked", StatFormatter.DEFAULT);
+  public static final Identifier BABY_AGE_UNLOCKED = register("baby_age_unlocked", StatFormatter.DEFAULT);
 
   private static Identifier register(String id, StatFormatter formatter) {
     Identifier identifier = Identifier.fromNamespaceAndPath(Constants.MOD_ID, id);

@@ -4,6 +4,7 @@ import me.roundaround.morestats.MoreStats;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffectUtil;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import org.spongepowered.asm.mixin.Mixin;
@@ -60,6 +61,10 @@ public abstract class ServerPlayerMixin {
 
     if (self.isInPowderSnow) {
       self.awardStat(MoreStats.POWDER_SNOW_TIME);
+    }
+
+    if (self.hasEffect(MobEffects.BREATH_OF_THE_NAUTILUS)) {
+      self.awardStat(MoreStats.BREATH_OF_THE_NAUTILUS_TIME);
     }
   }
 

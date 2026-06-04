@@ -46,5 +46,10 @@
   "stat.morestats.nether_portal": "Teleports by Nether Portal",
   "stat.morestats.end_portal": "Teleports by End Portal",
   "stat.morestats.end_gateway": "Teleports by End Gateway",
-  "stat.morestats.other_portals": "Teleports by Other (Unknown) Portals"
+  "stat.morestats.other_portals": "Teleports by Other (Unknown) Portals",
+  "stat.morestats.item_bundled": "Items Bundled",
+  "stat.morestats.suspicious_blocks_brushed": "Suspicious Blocks Brushed",
+  "stat.morestats.breath_of_the_nautilus_time": "Time with Breath of the Nautilus",
+  "stat.morestats.baby_age_locked": "Babies Age-Locked",
+  "stat.morestats.baby_age_unlocked": "Babies Age-Unlocked"
 }
