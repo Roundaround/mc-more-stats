@@ -7,3 +7,8 @@ trove-fabric-core = { module = "me.roundaround:trove-fabric-core" }
 trove-neoforge-core = { module = "me.roundaround:trove-neoforge-core" }
 trove-forge-core = { module = "me.roundaround:trove-forge-core" }
 trove-network = { module = "me.roundaround:trove-network" }
+# Game-test harness is per-loader (AL-051 / TR-026): a real, loader-discoverable
+# test-only mod, declared per loader subproject like trove-*-core.
+trove-fabric-gametest = { module = "me.roundaround:trove-fabric-gametest" }
+trove-neoforge-gametest = { module = "me.roundaround:trove-neoforge-gametest" }
+trove-forge-gametest = { module = "me.roundaround:trove-forge-gametest" }
