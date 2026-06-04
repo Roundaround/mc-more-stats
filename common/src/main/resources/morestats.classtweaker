@@ -1,0 +1,6 @@
+classTweaker v1 official
+
+# StatsScreen's mob-stats list + row are private inner classes; the
+# EntityStatsListWidget / EntityStatsListWidgetEntry mixins target them.
+accessible class net/minecraft/client/gui/screens/achievement/StatsScreen$MobsStatisticsList
+accessible class net/minecraft/client/gui/screens/achievement/StatsScreen$MobsStatisticsList$MobRow
