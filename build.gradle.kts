@@ -8,15 +8,21 @@ allay {
   authors.set(listOf("Roundaround"))
   license.set("MIT")
   homepage.set("https://modrinth.com/mod/more-stats")
-  repository.set("https://github.com/Roundaround/mc-fabric-more-stats")
-  issues.set("https://github.com/Roundaround/mc-fabric-more-stats/issues")
+  repository.set("https://github.com/Roundaround/mc-more-stats")
+  issues.set("https://github.com/Roundaround/mc-more-stats/issues")
+  logoFile.set("assets/morestats/banner.png")
 
   modrinth {
     projectId.set("more-stats")
   }
 
+//  curseforge {
+//    projectId.set(12345)
+//  }
+
   release {
     versionType.set("release")
-    sourcesJar.set(true)
+    minecraftVersions("26.1".."26.1.2")
+    changelogDir.set(file("changelogs"))
   }
 }
