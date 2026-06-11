@@ -1,11 +1,12 @@
 ![More Stats](https://imgur.com/y3G63So.png)
 
-![](https://img.shields.io/badge/Loader-Fabric-%23313e51?style=for-the-badge)
-![](https://img.shields.io/badge/MC-1.21%20|%201.20%20|%201.19-%23313e51?style=for-the-badge)
+![](https://img.shields.io/badge/Loader-Fabric%20|%20Forge%20|%20NeoForge-%23313e51?style=for-the-badge)
+![](https://img.shields.io/badge/MC-26.1--26.1.2%20|%201.21%20|%201.20%20|%201.19-%23313e51?style=for-the-badge)
 ![](https://img.shields.io/badge/Side-Client%20+%20Server-%23313e51?style=for-the-badge)
 
 [![Modrinth Downloads](https://img.shields.io/modrinth/dt/more-stats?style=flat&logo=modrinth&color=00AF5C)](https://modrinth.com/mod/more-stats)
-[![GitHub Repo stars](https://img.shields.io/github/stars/Roundaround/mc-fabric-more-stats?style=flat&logo=github)](https://github.com/Roundaround/mc-fabric-more-stats)
+[![CurseForge Downloads](https://img.shields.io/curseforge/dt/1572480?style=flat&logo=curseforge&color=F16436)](https://www.curseforge.com/minecraft/mc-mods/more-stats)
+[![GitHub Repo stars](https://img.shields.io/github/stars/Roundaround/mc-more-stats?style=flat&logo=github)](https://github.com/Roundaround/mc-more-stats)
 
 [![Support me on Ko-fi](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/compact/donate/kofi-singular-alt_vector.svg)](https://ko-fi.com/roundaround)
 
