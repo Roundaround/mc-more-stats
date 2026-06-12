@@ -16,9 +16,9 @@ allay {
     projectId.set("more-stats")
   }
 
-//  curseforge {
-//    projectId.set(12345)
-//  }
+  curseforge {
+    projectId.set(1572480)
+  }
 
   release {
     versionType.set("release")
