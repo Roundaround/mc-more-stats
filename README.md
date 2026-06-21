@@ -65,5 +65,8 @@ Track more stats in your Minecraft worlds. Can be viewed on the same screen as t
 - **Items Bundled** &nbsp; *(number of items stored in bundles)*
 - **Suspicious Blocks Brushed**
 - **Time with Breath of the Nautilus**
+- **Time Spent Nauseous** &nbsp; *(from noxious gas, nether portals, etc.)*
 - **Babies Age-Locked** &nbsp; *(baby animals prevented from growing up)*
 - **Babies Age-Unlocked** &nbsp; *(baby animals allowed to grow up again)*
+- **Times Bounced** &nbsp; *(off slime blocks, beds, etc.)*
+- **Times Launched by Geyser**
