@@ -7,7 +7,7 @@ import me.roundaround.trove.gametest.ClientTestContext;
 import me.roundaround.trove.gametest.ClientWorld;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.entity.AgeableMob;
-import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EntityTypes;
 import net.minecraft.world.item.Items;
 
 @ClientGameTest
@@ -19,7 +19,7 @@ public class BabyAgeLockTest implements ClientTest {
       int before = world.getStat(stat);
 
       world.summon(
-          EntityType.PIG,
+          EntityTypes.PIG,
           world.playerBlockPos().south(),
           "{Age:-24000,NoAI:1b,PersistenceRequired:1b,Silent:1b,Tags:[\"msbabyagelock\"]}"
       );

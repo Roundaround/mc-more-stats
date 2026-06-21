@@ -1,7 +1,9 @@
 package me.roundaround.morestats.mixin;
 
 import me.roundaround.morestats.MoreStats;
+import net.minecraft.core.Holder;
 import net.minecraft.resources.Identifier;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.PortalProcessor;
 import net.minecraft.world.entity.player.Player;
@@ -9,6 +11,7 @@ import net.minecraft.world.level.block.EndGatewayBlock;
 import net.minecraft.world.level.block.EndPortalBlock;
 import net.minecraft.world.level.block.NetherPortalBlock;
 import net.minecraft.world.level.block.Portal;
+import net.minecraft.world.level.gameevent.GameEvent;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
@@ -39,6 +42,17 @@ public abstract class EntityMixin {
         default -> this.awardStat(MoreStats.OTHER_PORTALS);
       }
     });
+  }
+
+  // Filter the BOUNCE game event off the simple gameEvent(Holder) entry rather than
+  // injecting into the complex restituteMovementAfterCollisions — older NeoForge/Forge
+  // Mixin can't transform that method on a Java-25 class. ServerPlayer-gated: this runs
+  // client-side too.
+  @Inject(method = "gameEvent(Lnet/minecraft/core/Holder;)V", at = @At("HEAD"))
+  private void onBounce(Holder<GameEvent> event, CallbackInfo ci) {
+    if (event == GameEvent.BOUNCE && (Entity) (Object) this instanceof ServerPlayer player) {
+      player.awardStat(MoreStats.BOUNCE);
+    }
   }
 
   @Unique

@@ -5,23 +5,18 @@ import me.roundaround.morestats.MoreStats;
 import me.roundaround.trove.gametest.ClientTest;
 import me.roundaround.trove.gametest.ClientTestContext;
 import me.roundaround.trove.gametest.ClientWorld;
-import net.minecraft.world.entity.EntityTypes;
-import net.minecraft.world.item.Items;
+import net.minecraft.stats.Stats;
 
 @ClientGameTest
-public class TotemsPoppedByTest implements ClientTest {
+public class NauseaTimeTest implements ClientTest {
   @Override
   public void runTest(ClientTestContext context) {
     try (ClientWorld world = context.worldBuilder().survival().create()) {
-      var stat = MoreStats.TOTEMS_POPPED_BY.get(EntityTypes.ZOMBIE);
+      var stat = Stats.CUSTOM.get(MoreStats.NAUSEA_TIME);
       int before = world.getStat(stat);
 
-      world.setOffHandItem(Items.TOTEM_OF_UNDYING);
-      world.setHunger(5, 0f);
-      world.setHealth(1f);
-
-      world.summon(EntityTypes.ZOMBIE, world.playerBlockPos().south(2), "{Silent:1b}");
-      world.waitUntilDamaged();
+      world.effect("minecraft:nausea", 30, 0);
+      context.waitTicks(40);
 
       world.assertStatAtLeast(stat, before + 1);
     }

@@ -8,7 +8,7 @@ import me.roundaround.trove.gametest.ClientWorld;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.stats.Stats;
-import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EntityTypes;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantments;
@@ -45,8 +45,12 @@ public class MendingRepairTest implements ClientTest {
       world.setMainHandItem(pickaxe);
       context.waitTicks(2);
 
-      world.summon(EntityType.EXPERIENCE_ORB, world.playerBlockPos(), "{Value:50}");
-      context.waitTicks(20);
+      // A few blocks up, not at the player's feet: an orb spawned on the player is
+      // collected the same tick (before the summon helper can verify it appeared).
+      // From here it falls + seeks the player (within XP pickup range) and is
+      // consumed by the Mending repair path a few ticks later.
+      world.summon(EntityTypes.EXPERIENCE_ORB, world.playerBlockPos().above(3), "{Value:50}");
+      context.waitTicks(30);
 
       world.assertStatAtLeast(stat, before + 1);
     }

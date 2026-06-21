@@ -66,6 +66,10 @@ public abstract class ServerPlayerMixin {
     if (self.hasEffect(MobEffects.BREATH_OF_THE_NAUTILUS)) {
       self.awardStat(MoreStats.BREATH_OF_THE_NAUTILUS_TIME);
     }
+
+    if (self.hasEffect(MobEffects.NAUSEA)) {
+      self.awardStat(MoreStats.NAUSEA_TIME);
+    }
   }
 
   @Inject(method = "onEnchantmentPerformed", at = @At(value = "HEAD"))

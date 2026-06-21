@@ -50,6 +50,9 @@
   "stat.morestats.item_bundled": "Items Bundled",
   "stat.morestats.suspicious_blocks_brushed": "Suspicious Blocks Brushed",
   "stat.morestats.breath_of_the_nautilus_time": "Time with Breath of the Nautilus",
+  "stat.morestats.nausea_time": "Time Spent Nauseous",
   "stat.morestats.baby_age_locked": "Babies Age-Locked",
-  "stat.morestats.baby_age_unlocked": "Babies Age-Unlocked"
+  "stat.morestats.baby_age_unlocked": "Babies Age-Unlocked",
+  "stat.morestats.bounce": "Times Bounced",
+  "stat.morestats.geyser_launch": "Times Launched by Geyser"
 }

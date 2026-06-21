@@ -17,7 +17,7 @@ public abstract class LivingEntityMixin {
   @Inject(
       method = "checkTotemDeathProtection", at = @At(
       value = "INVOKE",
-      target = "Lnet/minecraft/advancements/criterion/UsedTotemTrigger;trigger" +
+      target = "Lnet/minecraft/advancements/triggers/UsedTotemTrigger;trigger" +
                "(Lnet/minecraft/server/level/ServerPlayer;Lnet/minecraft/world/item/ItemStack;)V"
   )
   )
